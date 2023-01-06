@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@font-face{
+    font-family: Gotham;
+    src:url(Gotham-Font/GothamMedium.ttf );
+}
+body{
+    
+    background-color:rgb(92, 92, 92);
+}
+*{
+    margin: 0PX;
+    padding: 0px;
+}
+nav{
+    font-family: 'Oswald',sans-serif;
+}
+nav ul{
+    
+    background-color: black;
+    align-items: center;
+    color: white;
+    display:flex;
+    list-style: none;
+    align-items: center;
+    height:60px;
+}
+.icon img{
+    width:30px;
+    padding:1 15px;
+    align-items: center;
+}
+.icon{
+    display:flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+    margin-bottom: 4px;
+}
+nav ul li{
+    padding: 0 6px;
+}
+.container{
+    min-height: 80vh;
+    background-color:black;
+    color: white;
+    font-family: Gotham;
+    padding:0 50px;
+}
+
+.bottom{
+    position:sticky;
+    background-color: rgba(39, 39, 39, 0.897);
+    color: aliceblue;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+    position: relative;
+    left:0px;
+    bottom: 10px;
+}
+.icon i{
+    cursor: pointer;
+    padding-right: 14px;
+}
+
+#myprogressbar{
+    width: 80vw;
+    text-align: center;
+    cursor: pointer;
+}
+.songitemcontainner{
+    padding:10px 0;
+}
+.songItem img{
+    height: 250px;
+    width: 250px;
+}
+.songItem{
+    
+    background-color: darkgray;
+    padding: 15px 15px;
+
+    margin: 0 20px;
+
+    border-radius: 5px;
+    color: black;
+}
+span{
+    padding: 2px 0;
+    font-size: 1.2em;
+}
+.timestamp{
+     cursor: pointer;
+     display: flex;
+     flex-direction: row;
+}
+
+.songList{
+    display:flex;
+    flex-direction: row;
+    margin: 50px 0;
+}
+.songInfo img{
+    height: 30px;
+    width: 30px;
+    margin-top:  1px ;
+}
+.songInfo{
+    position:absolute;
+    left:150px;
+    padding-bottom: 30px;
+    font-family: 'Oswald',sans-serif;;
+    
+}
+.songInfo img{
+    opacity:0;
+    transition: opacity 1s ease-in;
+    
+}
