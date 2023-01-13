@@ -8,8 +8,8 @@ body{
     background-color:rgb(92, 92, 92);
 }
 *{
-    margin: 0PX;
-    padding: 0px;
+    margin: 0px 0px;
+    padding: 0px 0px;
 }
 nav{
     font-family: 'Oswald',sans-serif;
@@ -54,10 +54,12 @@ nav ul li{
     height: 80px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     flex-direction: column-reverse;
     position: relative;
     left:0px;
+    padding-left: 30px;
+    padding-bottom: 30px;
     bottom: 10px;
 }
 .icon i{
@@ -66,7 +68,7 @@ nav ul li{
 }
 
 #myprogressbar{
-    width: 80vw;
+    width: 90vw;
     text-align: center;
     cursor: pointer;
 }
@@ -109,7 +111,7 @@ span{
 }
 .songInfo{
     position:absolute;
-    left:150px;
+       
     padding-bottom: 30px;
     font-family: 'Oswald',sans-serif;;
     
@@ -118,4 +120,8 @@ span{
     opacity:0;
     transition: opacity 1s ease-in;
     
+}
+.icon{
+    position: relative;
+    left: 1300px;
 }
