@@ -1,127 +1,205 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+
 @font-face{
     font-family: Gotham;
     src:url(Gotham-Font/GothamMedium.ttf );
 }
-body{
+@media screen and (min-width:300px){
     
-    background-color:rgb(92, 92, 92);
+    .songItem img{
+        inline-size: 1000%;
+        object-fit: cover;
+        border-radius: 0.5rem; 
+    }
+    
+}
+@media screen and (min-width:1000px){
+    
+}
+html{
+    font-size: 62.5%;
 }
 *{
-    margin: 0px 0px;
-    padding: 0px 0px;
+    margin: 0em;
+    padding: 0em;
+    box-sizing: border-box;
 }
-nav{
+body{
+    background-color:rgb(22, 22, 22);
+    max-width: 100%;
+}
+
+li, a, h{
     font-family: 'Oswald',sans-serif;
-}
-nav ul{
+    font-weight: 500;
+    color:aliceblue;
+    text-decoration: none;
     
-    background-color: black;
-    align-items: center;
-    color: white;
-    display:flex;
-    list-style: none;
-    align-items: center;
-    height:60px;
-}
-.icon img{
-    width:30px;
-    padding:1 15px;
-    align-items: center;
-}
-.icon{
-    display:flex;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 1.3rem;
-    margin-bottom: 4px;
-}
-nav ul li{
-    padding: 0 6px;
-}
-.container{
-    min-height: 80vh;
-    background-color:black;
-    color: white;
-    font-family: Gotham;
-    padding:0 50px;
 }
 
-.bottom{
-    position:sticky;
-    background-color: rgba(39, 39, 39, 0.897);
-    color: aliceblue;
-    height: 80px;
+header{
+    position:absolute;
+    top:0;
+    width: 100%;
+    height: auto;
+    background-color:rgb(50,50,50);
+    
     display: flex;
-    justify-content: center;
-    align-items: baseline;
-    flex-direction: column-reverse;
-    position: relative;
-    left:0px;
-    padding-left: 30px;
-    padding-bottom: 30px;
-    bottom: 10px;
+    flex-direction: row;
+    z-index: auto;
+    align-content: center;
 }
-.icon i{
-    cursor: pointer;
-    padding-right: 14px;
+#nav-links{
+    display: flex;
+    flex-direction: row;
+    font-size: small;
+    
+    list-style: none;
+    gap: 2rem;
+    padding: 2rem;
 }
 
-#myprogressbar{
-    width: 90vw;
-    text-align: center;
-    cursor: pointer;
+#logo{
+    width: 5rem;
+    height: 5.5rem;
+    margin: 0.4rem 0 0 0;
+    padding: 1rem 0.5rem 1rem 1rem;
+    
+    
 }
-.songitemcontainner{
-    padding:10px 0;
+
+#App{
+    flex-grow: 2;
+    margin-top: 0.45rem;
+    padding: 1rem 1rem 0.5rem 0rem;
+    font-size:2.0rem;
+}
+
+/* Container design */
+.container{
+    
+    position: absolute;
+    height: auto;
+    width: 100%;
+    
+    top:7rem;
+
+    margin:  0;
+    padding: 0;
+    
+
+    font-family: Gotham;
+    font-weight: 500;
+    text-shadow: 0.25px 0.25px 2px rgba(0,0,0, 0.25);
+    color: aliceblue;
+    background-attachment: fixed;
+
+    justify-content:space-around;
+      
+}
+.songList{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 25%;
+    gap: 5rem;
+    overflow: auto;
+    padding: 2rem;
+    
+    scroll-behavior: smooth;
+}
+#title{
+    font-size: large;
 }
 .songItem img{
-    height: 250px;
-    width: 250px;
+    inline-size: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem; 
 }
 .songItem{
-    
     background-color: darkgray;
-    padding: 15px 15px;
-
-    margin: 0 20px;
-
-    border-radius: 5px;
+    padding: 1.5rem 1.5rem;
+    margin: 0 1rem;
+    border-radius: 0.5rem; 
     color: black;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
 }
-span{
-    padding: 2px 0;
-    font-size: 1.2em;
+.songItem>.songName{
+    font-size:medium;
 }
-.timestamp{
-     cursor: pointer;
-     display: flex;
-     flex-direction: row;
+.container>.songitemcontainner>#intro
+{
+    font-size: xx-large;
+}
+.songList::-webkit-scrollbar{
+    display: none;
+}
+#intro{
+    margin: 2rem 2rem 2rem 2rem;
+
+}
+/* Player */
+#bottom{
+    
+    background-color:rgb(50,50,50);
+    color: aliceblue;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 8rem;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    align-items: center;
+
+}
+#myprogressbar{
+    min-width:95%;
+    cursor: pointer;
+    
+    position: absolute;
+    bottom: 1rem;
+    left: auto;
+    
 }
 
-.songList{
-    display:flex;
-    flex-direction: row;
-    margin: 50px 0;
+.songInfo{
+    font-size: medium;
+    font-family: 'Oswald',sans-serif;
+    font-size: 1.25rem;
+    
 }
 .songInfo img{
-    height: 30px;
-    width: 30px;
-    margin-top:  1px ;
+    height: auto;
+    width: 5rem;
+    
+    position: absolute;
+    right: 2rem;
+    bottom: 2.5rem;
+    
 }
-.songInfo{
-    position:absolute;
-       
-    padding-bottom: 30px;
-    font-family: 'Oswald',sans-serif;;
+#masterSongName{
+    position: absolute;
+    bottom: 4rem;
+    right: 7.5rem;
     
 }
 .songInfo img{
     opacity:0;
     transition: opacity 1s ease-in;
-    
 }
-.icon{
-    position: relative;
-    left: 1300px;
+#playback{
+    font-size: 2.5rem;
+    align-items: center;
+
+    position: absolute;
+    left: 3rem;
+    bottom: 3.5rem;
+    
 }
