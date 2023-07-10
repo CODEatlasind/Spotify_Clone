@@ -1,73 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify Clone</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spotify Clone</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
 
-</head>
+    </head>
 
-<body>
-    <nav>
-        <ul>
-        <li class="icon"><img src="spotify-logo-png-7057.ico" alt="Spotify">Spotify</li>
-        <li>Home</li>
-        <li>Artists</li>
-        </ul>
-       </nav>
-        
-    <div class="container">
-        <div class="songitemcontainner">
-         <h1>Best Songs</h1>
-            <div class="songList">
-                <div class="songItem">
-                <img  src="cover/1.jpg" alt="stay" class="src">
-                <span class="songName">Stay</span>
-                <span class="songlistplay"><span class="timestamp">2:22</span><i id="0" class="far songitemplay fa fa-solid fa-circle-play"></i></span>
-                </div>
-                <div class="songItem">
-                <img  src="cover/1.jpg" alt="stay" class="src">
-                <span class="songName">Stay</span>
-                <span class="songlistplay"><span class="timestamp">2:22</span><i id="1" class="far songitemplay fa fa-solid fa-circle-play"></i></span>
-                </div>
-                <div class="songItem">
-                <img  src="cover/1.jpg" alt="stay" class="src">
-                <span class="songName">Stay</span>
-                <span class="songlistplay"><span class="timestamp">2:22</span><i id="2" class="far songitemplay fa fa-solid fa-circle-play"></i></span>
-                </div>
-                <div class="songItem">
-                <img  src="cover/1.jpg" alt="stay" class="src">
-                <span class="songName">Stay</span>
-                <span class="songlistplay"><span class="timestamp">2:22</span><i id="3" class="far songitemplay fa fa-solid fa-circle-play"></i></span>
-                </div>
-                <div class="songItem">
-                <img  src="cover/1.jpg" alt="stay" class="src">
-                <span class="songName">Stay</span>
-                <span class="songlistplay"><span class="timestamp">2:22</span><i id="4" class="far songitemplay fa fa-solid fa-circle-play"></i></span>
+    <body>
+        <header>
+            <img class="icon" id="logo" src="spotify-logo-png-7057.ico" alt="Spotify">
+            <a href="#" id="App">Spotify</a>
+            <nav id="navbar">
+                <ul id="nav-links">
+                <li ><a href="#" id="Home">Home</a></li>
+                <li ><a href="https://github.com/CODEatlasind" target="_blank" rel="noopener noreferrer" id="About">About</a></li>
+                </ul>
+            </nav>
+        </header>
+            
+        <div class="container">
+            <div class="songitemcontainner">
+                <h1 id="intro">Trending Songs</h1>
+                <div class="songList">
+
+                    <div class="songItem">
+                        <img  src="cover/1.jpg" alt="stay" class="src">
+                        <span class="songName">Stay</span>
+                        <span class="songlistplay" >
+                            <style>
+                                .songlistplay{ 
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    align-content:center ;
+                                    font-size: medium;
+                                    
+                                }
+                                .play_button{
+                                    font-size: x-large;
+                                }
+                                .timestamp{
+                                    position: relative;
+                                    top: auto;
+                                    font-size: medium;
+                                }
+                            </style>
+                            <span class="timestamp">2:22</span>
+                            <i id="0" class="far songitemplay fa fa-solid fa-circle-play play_button"></i>
+                        </span>
+                    </div>
+                
+                    <div class="songItem">
+                        <img  src="cover/1.jpg" alt="stay" class="src">
+                        <span class="songName">Stay</span>
+                        <span class="songlistplay">
+                            <span class="timestamp">2:22</span>
+                            <i id="1" class="far songitemplay fa fa-solid fa-circle-play play_button"></i>
+                        </span>
+                    </div>
+
+                    <div class="songItem">
+                        <img  src="cover/1.jpg" alt="stay" class="src">
+                        <span class="songName">Stay</span>
+                        <span class="songlistplay">
+                            <span class="timestamp">2:22</span>
+                            <i id="2" class="far songitemplay fa fa-solid fa-circle-play play_button"></i>
+                        </span>
+                    </div>
+
+                    <div class="songItem">
+                        <img  src="cover/1.jpg" alt="stay" class="src">
+                        <span class="songName">Stay</span>
+                        <span class="songlistplay">
+                            <span class="timestamp">2:22</span>
+                            <i id="3" class="far songitemplay fa fa-solid fa-circle-play play_button"></i>
+                        </span>
+                    </div>
+
+                    <div class="songItem">
+                        <img  src="cover/1.jpg" alt="stay" class="src">
+                        <span class="songName">Stay</span>
+                        <span class="songlistplay">
+                            <span class="timestamp">2:22</span>
+                            <i id="4" class="far songitemplay fa fa-solid fa-circle-play play_button"></i>
+                        </span>
+                    </div>
+
                 </div>
             </div>
+            <!-- NOT OF ANY USE TAG -->
+            <div class="songbanner"></div>
         </div>
-        <div class="songbanner"></div>
-    </div>
-<div class="bottom">
-    <input type="range" name="range"  min="0"  max="100" value="0" id="myprogressbar">
-    <div class="icon">
-        <!-- fontawesomeicon -->
-        <i  class="fa fa-duotone fa-backward-step" id="prev"></i>
-        <i class="fa-solid fa-circle-play" id="masterPlay"></i>
-        <i class="fa fa-duotone fa-forward-step" id="next"></i>
-    </div>
-    
-    <div class="songInfo">
-        <img src="anim.gif" alt="animation" srcset="" id="gif"><span id="masterSongName" > Stay - Justin Bieber </span>
-    </div>
-</div>
+        
+        <div id="bottom">
+            <div id="playback" class="icon">
+                <!-- fontawesomeicon -->
+                <i  class="fa fa-duotone fa-backward-step" id="prev"></i>
+                <i class="fa-solid fa-circle-play" id="masterPlay"></i>
+                <i class="fa fa-duotone fa-forward-step" id="next"></i>
+            </div>
+            
+            <input type="range" name="range"  min="0"  max="100" value="0" id="myprogressbar">
+            <div class="songInfo">
+                <img src="anim.gif" alt="animation" srcset="" id="gif"><span id="masterSongName" > Stay - Justin Bieber </span>
+            </div>
+        </div>
+    </body>
 
-</body>
+
+    
+
 <script src="script.js"></script>
 <script src="https://kit.fontawesome.com/2016f384be.js" crossorigin="anonymous"></script>
-</body>
+
 </html> 
