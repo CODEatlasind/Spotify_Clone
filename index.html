@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/png" href="assets\logo\spotify-logo.ico" />
+  </head>
+
+  <body>
+    <header>
+      <nav id="navbar">
+        <img
+          class="icon"
+          id="logo"
+          src="assets\logo\spotify-logo.ico"
+          alt="Spotify-logo"
+          onclick="window.location.reload()"
+        />
+        <h1>
+          <a href="#" id="App"
+            >Spotify<span style="font-size: x-small">v1</span></a
+          >
+        </h1>
+        <ul id="nav-links">
+          <li><a href="#" id="Home">Home</a></li>
+          <li>
+            <a
+              href="https://github.com/CODEatlasind"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="About"
+              >About</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="container">
+      <h1 class="intro">Sample Songs</h1>
+
+      <div class="songList">
+        <div class="songItem">
+          <img src="assets/cover/1.jpg" alt="stay" class="src" />
+          <p class="songName">Stay</p>
+          <p class="songlistplay">
+            <span class="timestamp">2:22</span>
+            <i
+              id="0"
+              class="far songitemplay fa fa-solid fa-circle-play play_button"
+            ></i>
+          </p>
+        </div>
+
+        <div class="songItem">
+          <img src="assets/cover/1.jpg" alt="stay" class="songImage" />
+          <p class="songName">Stay</p>
+          <p class="songlistplay">
+            <span class="timestamp">2:22</span>
+            <i
+              id="1"
+              class="far songitemplay fa fa-solid fa-circle-play play_button"
+            ></i>
+          </p>
+        </div>
+
+        <div class="songItem">
+          <img src="assets/cover/1.jpg" alt="stay" class="songImage" />
+          <p class="songName">Stay</p>
+          <p class="songlistplay">
+            <span class="timestamp">2:22</span>
+            <i
+              id="2"
+              class="far songitemplay fa fa-solid fa-circle-play play_button"
+            ></i>
+          </p>
+        </div>
+
+        <div class="songItem">
+          <img src="assets/cover/1.jpg" alt="stay" class="songImage" />
+          <p class="songName">Stay</p>
+          <p class="songlistplay">
+            <span class="timestamp">2:22</span>
+            <i
+              id="3"
+              class="far songitemplay fa fa-solid fa-circle-play play_button"
+            ></i>
+          </p>
+        </div>
+
+        <div class="songItem">
+          <img src="assets/cover/1.jpg" alt="stay" class="songImage" />
+          <p class="songName">Stay</p>
+          <p class="songlistplay">
+            <span class="timestamp">2:22</span>
+            <i
+              id="4"
+              class="far songitemplay fa fa-solid fa-circle-play play_button"
+            ></i>
+          </p>
+        </div>
+        <!-- <div class="songItem">
+          <img src="assets/cover/1.jpg" alt="stay" class="songImage" />
+          <p class="songName">Stay</p>
+          <p class="songlistplay">
+            <span class="timestamp">2:22</span>
+            <i
+              id="4"
+              class="far songitemplay fa fa-solid fa-circle-play play_button"
+            ></i>
+          </p>
+        </div>
+        <div class="songItem">
+          <img src="assets/cover/1.jpg" alt="stay" class="songImage" />
+          <p class="songName">Stay</p>
+          <p class="songlistplay">
+            <span class="timestamp">2:22</span>
+            <i
+              id="4"
+              class="far songitemplay fa fa-solid fa-circle-play play_button"
+            ></i>
+          </p>
+        </div> -->
+      </div>
+      <!-- </div> -->
+    </section>
+    <!-- <div class="songbanner"></div> -->
+
+    <footer class="bottom">
+      <input
+        type="range"
+        name="range"
+        min="0"
+        max="100"
+        value="0"
+        id="myprogressbar"
+      />
+      <div class="playbackInfo">
+        <div id="playback" class="icon">
+          <i class="fa fa-duotone fa-backward-step" id="prev"></i>
+          <i class="fa-solid fa-circle-play" id="masterPlay"></i>
+          <i class="fa fa-duotone fa-forward-step" id="next"></i>
+        </div>
+
+        <div class="songInfo">
+          <p id="masterSongName">Stay - Justin Bieber</p>
+          <img
+            src="assets/animation/anim.gif"
+            alt="animation"
+            srcset=""
+            id="gif"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+
+  <script src="script.js"></script>
+  <script
+    src="https://kit.fontawesome.com/2016f384be.js"
+    crossorigin="anonymous"
+  ></script>
+</html>
