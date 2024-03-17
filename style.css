@@ -24,7 +24,7 @@
     height: 28em;
   }
 }
-@media (height>) @media (height >= 800px) {
+@media (height >= 800px) {
   section {
     position: absolute;
     top: 50%;
@@ -50,7 +50,7 @@ body {
   margin: 0em;
   padding: 0em;
   box-sizing: border-box;
-  border: solid 1px white;
+  /* border: solid 1px white; */
 }
 
 li,
