@@ -20,7 +20,7 @@ let song = [
     timeStamp: "2:24",
   },
   {
-    songName: "Never Gonna Give you Up - Rick Ashley",
+    songName: "Never gonna give you up - Rick Ashley",
     filePath: "assets/song/3.mp3",
     coverPath: "assets/cover/3.jpg",
     timeStamp: "3:32",
@@ -32,7 +32,7 @@ let song = [
     timeStamp: "4:12",
   },
   {
-    songName: "SpaceShip - Shinda Kehlon",
+    songName: "Spaceship - Shinda Kehlon",
     filePath: "assets/song/5.mp3",
     coverPath: "assets/cover/5.jpg",
     timeStamp: "2:04",
