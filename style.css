@@ -152,7 +152,9 @@ section > .songList > .songItem {
   font-size: xx-large;
   float: inline-end;
 }
-
+.songList::-webkit-scrollbar {
+  display: none;
+}
 /* Player */
 footer {
   /* !add var to colour */
