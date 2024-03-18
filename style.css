@@ -18,6 +18,7 @@ html,
 body {
   /* !Put a var here */
   background-color: var(--primary);
+  font-family: Gotham, sans-serif;
 }
 * {
   margin: 0em;
@@ -29,7 +30,6 @@ body {
 li,
 a,
 h {
-  font-family: "Oswald", sans-serif;
   font-weight: 500;
   color: var(--text-color);
   text-decoration: none;
@@ -40,7 +40,7 @@ nav {
   background-color: var(--secondary);
   z-index: 10000;
 
-  width: 100vw;
+  /* width: 100vw; */
   height: 8vh;
 
   font-size: small;
@@ -52,7 +52,11 @@ nav {
 
   padding: 1rem 2rem 1rem 2rem;
 }
-nav > img {
+nav > div {
+  display: flex;
+  align-items: center;
+}
+nav > div > img {
   height: auto;
   width: 4rem;
   cursor: pointer;
@@ -76,7 +80,6 @@ section {
   padding: 0rem 2.5rem;
   width: 100%;
   height: 65vh;
-  font-family: Gotham, sans-serif;
   font-weight: 500;
   margin: 2em 0;
 }
@@ -94,7 +97,7 @@ section > h1 {
   overflow: auto;
   scroll-behavior: auto;
 
-  padding: 4rem 2rem 11rem 2rem;
+  padding: 2rem 2rem 11rem 2rem;
 }
 section > .songList > .songItem {
   background-color: var(--tertiary);
@@ -103,6 +106,7 @@ section > .songList > .songItem {
   flex: 0 0 auto;
 
   font-size: large;
+  font-family: Oswald, sans-serif;
 
   box-shadow: 0 4px 2px 0 rgba(255, 255, 255, 0.273);
 }
@@ -112,7 +116,6 @@ section > .songList > .songItem {
   width: 100%;
   height: 78%;
   object-fit: cover;
-  margin-bottom: 10px;
 }
 .songItem {
   width: 30rem;
@@ -124,9 +127,6 @@ section > .songList > .songItem {
 }
 .songList::-webkit-scrollbar {
   display: none;
-}
-.songItem:nth-child(3) > .songItemInfo > .songName {
-  font-size: small;
 }
 
 .arrowHead {
@@ -143,6 +143,9 @@ section > .songList > .songItem {
   transition: ease-in-out 0.23s;
   z-index: 100;
 }
+.timestamp {
+  font-size: small;
+}
 /* Player */
 footer {
   /* !add var to colour */
@@ -154,8 +157,6 @@ footer {
 
   width: 100%;
   height: 10vh;
-
-  font-family: Gotham, sans-serif;
 }
 
 .bottomPlayback {
@@ -180,7 +181,7 @@ footer {
   font-size: 2em;
 }
 footer > div > div > .songInfo {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   gap: 1rem;
 }
@@ -222,7 +223,5 @@ footer > div > div > .songInfo {
   .songItem > img {
     height: 60%;
     width: 100%;
-  }
-  .songInfo {
   }
 }
