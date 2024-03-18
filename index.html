@@ -43,7 +43,7 @@
     <section class="container">
       <h1 class="intro">Sample Songs</h1>
 
-      <div class="songList">
+      <div class="songList" id="song-section">
         <div class="songItem">
           <img src="assets/cover/1.jpg" alt="stay" class="src" />
           <div class="songItemInfo">
@@ -105,6 +105,10 @@
         </div>
       </div>
       <!-- </div> -->
+      <div class="arrowHead">
+        <i class="fa-solid fa-circle-arrow-left" id="left-pan"></i>
+        <i class="fa-solid fa-circle-arrow-right" id="right-pan"></i>
+      </div>
     </section>
     <!-- <div class="songbanner"></div> -->
 
@@ -140,6 +144,7 @@
   </body>
 
   <script src="script.js"></script>
+  <script src="reactivity.js"></script>
   <script
     src="https://kit.fontawesome.com/2016f384be.js"
     crossorigin="anonymous"

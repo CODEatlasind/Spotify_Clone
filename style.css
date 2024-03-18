@@ -4,33 +4,6 @@
   font-family: Gotham;
   src: url(Gotham-Font/GothamMedium.ttf);
 }
-@media (width<360px) {
-  .songItem {
-    width: 20rem;
-    height: 25rem;
-  }
-}
-@media (width<= 1024px) {
-  .songList {
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 2rem 0;
-  }
-  section > h1 {
-    text-align: center;
-  }
-  .songItem {
-    width: 25em;
-    height: 28em;
-  }
-}
-@media (height >= 800px) {
-  section {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-  }
-}
 
 :root {
   --primary: rgb(24, 24, 24);
@@ -108,23 +81,22 @@ section {
   margin: 2em 0;
 }
 section > h1 {
-  font-size: xx-large;
+  font-size: 3em;
   margin: 1rem 0;
   padding: 0 4rem;
 }
 
 .songList {
   display: flex;
-  gap: 6vw 2vw;
+  gap: 4em 4em;
   height: auto;
   position: relative;
   overflow: auto;
-  scroll-behavior: smooth;
-  padding: 1rem 2rem 6rem 2rem;
-  /* margin: 0 0  0; */
+  scroll-behavior: auto;
+
+  padding: 4rem 2rem 11rem 2rem;
 }
 section > .songList > .songItem {
-  /* !add var */
   background-color: var(--tertiary);
   padding: 0.5em;
   border-radius: 5px;
@@ -132,21 +104,19 @@ section > .songList > .songItem {
 
   font-size: large;
 
-  /* position: relative; */
-
-  box-shadow: 0 8px 6px 0 rgba(255, 255, 255, 0.173);
+  box-shadow: 0 4px 2px 0 rgba(255, 255, 255, 0.273);
 }
 
 .songItem > img {
   border-radius: 5px;
   width: 100%;
-  height: 70%;
+  height: 78%;
   object-fit: cover;
   margin-bottom: 10px;
 }
 .songItem {
   width: 30rem;
-  height: 40rem;
+  height: 38rem;
 }
 .songitemplay {
   font-size: xx-large;
@@ -154,6 +124,24 @@ section > .songList > .songItem {
 }
 .songList::-webkit-scrollbar {
   display: none;
+}
+.songItem:nth-child(3) > .songItemInfo > .songName {
+  font-size: small;
+}
+
+.arrowHead {
+  cursor: pointer;
+  font-size: x-large;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.songItem:hover {
+  scale: 1.1;
+  transition: ease-in-out 0.23s;
+  z-index: 100;
 }
 /* Player */
 footer {
@@ -189,17 +177,52 @@ footer {
   margin: 0 2em;
 }
 .icon {
-  font-size: x-large;
+  font-size: 2em;
 }
 footer > div > div > .songInfo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 1rem;
 }
 .songInfo > img {
   height: auto;
-  width: 2rem;
+  width: 3rem;
+  opacity: 0;
+  transition: ease-in-out 0.5s;
 }
 .songInfo > p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
+  word-wrap: break-word;
+}
+@media (width<= 1024px) {
+  .songList {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -1rem 0;
+  }
+  section > h1 {
+    text-align: center;
+  }
+  .arrowHead {
+    display: none;
+  }
+}
+@media (height >= 1200px) and (width>1024px) {
+  section {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+@media (width<360px) {
+  .songItem {
+    width: 20rem;
+    height: 28rem;
+  }
+  .songItem > img {
+    height: 60%;
+    width: 100%;
+  }
+  .songInfo {
+  }
 }
